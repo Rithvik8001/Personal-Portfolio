@@ -15,7 +15,7 @@ const LoaderWrapper = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 4000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
