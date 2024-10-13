@@ -4,14 +4,7 @@ import { easeOutExpo } from "@/constants/ease";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const greetings = [
-  "Hello!",
-  "Namaste!",
-  "Hola!",
-  "Bonjour!",
-  "Guten Tag!",
-  "Ciao!",
-];
+const greetings = ["Hello!", "Namaste!", "Hola!", "Ciao!"];
 
 const Loader = () => {
   const [greeting, setGreeting] = useState(
@@ -21,7 +14,7 @@ const Loader = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setGreeting(greetings[Math.floor(Math.random() * greetings.length)]);
-    }, 2500);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -32,7 +25,10 @@ const Loader = () => {
       className="h-screen w-full flex justify-center items-center"
     >
       <AnimatePresence mode="popLayout">
-        <h1 key={greeting} className="w-full text-center overflow-hidden">
+        <h1
+          key={greeting}
+          className="w-full text-center overflow-hidden font-bold"
+        >
           <motion.span
             variants={{
               initial: { y: "100%" },

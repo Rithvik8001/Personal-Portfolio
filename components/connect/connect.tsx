@@ -51,7 +51,7 @@ const Connect = () => {
           }}
           className="text-4xl font-medium md:text-6xl leading-[1.1] md:leading-[1.15]"
         >
-          Let's create you something great!
+          Let's create something great!
         </motion.h1>
         <motion.p
           ref={headingParagraphRef}
@@ -72,8 +72,10 @@ const Connect = () => {
           }}
           className="grid grid-cols-2 mt-8"
         >
-          <ButtonLink href="https://linkedin.com">LinkedIn</ButtonLink>
-          <ButtonLink href="https://github.com">GitHub</ButtonLink>
+          <ButtonLink href="https://www.linkedin.com/in/rithvik-pallamreddy-9bb62b249/">
+            LinkedIn
+          </ButtonLink>
+          <ButtonLink href="https://github.com/Rithvik8001">GitHub</ButtonLink>
         </motion.div>
       </div>
       <motion.div

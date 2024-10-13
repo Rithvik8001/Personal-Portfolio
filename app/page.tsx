@@ -9,26 +9,26 @@ import Projects from "@/components/projects/projects";
 import Connect from "@/components/connect/connect";
 
 const Experience = dynamic(() => import("@/components/experience/experience"), {
-    ssr: false,
+  ssr: false,
 });
 const Skills = dynamic(() => import("@/components/skills/skills"), {
-    ssr: false,
+  ssr: false,
 });
 
 const HomePage = () => {
-    return (
-        <LayoutGroup>
-            <main className="p-2 xl:px-[13.5rem] 2xl:px-[16.5rem]">
-                <Hero />
-                <About />
-                <Experience />
-                <Education />
-                <Skills />
-                <Projects />
-                <Connect />
-            </main>
-        </LayoutGroup>
-    );
+  return (
+    <LayoutGroup>
+      <main className="p-2 xl:px-[13.5rem] 2xl:px-[16.5rem]">
+        <Hero />
+        <About />
+        <Experience />
+        <Education />
+        <Skills />
+        <Projects />
+        <Connect />
+      </main>
+    </LayoutGroup>
+  );
 };
 
 export default HomePage;
