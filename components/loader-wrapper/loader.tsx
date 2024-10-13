@@ -14,7 +14,7 @@ const Loader = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setGreeting(greetings[Math.floor(Math.random() * greetings.length)]);
-    }, 2000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
