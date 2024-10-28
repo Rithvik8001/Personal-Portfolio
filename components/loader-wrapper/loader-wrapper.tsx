@@ -5,32 +5,32 @@ import Loader from "./loader";
 import { AnimatePresence } from "framer-motion";
 
 const LoaderWrapper = ({ children }: { children: ReactNode }) => {
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [isMounted, setIsMounted] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsLoaded(true);
-        }, 7000);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 5000);
 
-        return () => clearTimeout(timer);
-    }, []);
+    return () => clearTimeout(timer);
+  }, []);
 
-    if (!isMounted) return null;
+  if (!isMounted) return null;
 
-    return (
-        <AnimatePresence mode="wait">
-            {isLoaded ? (
-                <Fragment key="children">{children}</Fragment>
-            ) : (
-                <Loader key="loader" />
-            )}
-        </AnimatePresence>
-    );
+  return (
+    <AnimatePresence mode="wait">
+      {isLoaded ? (
+        <Fragment key="children">{children}</Fragment>
+      ) : (
+        <Loader key="loader" />
+      )}
+    </AnimatePresence>
+  );
 };
 
 export default LoaderWrapper;

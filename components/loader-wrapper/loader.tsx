@@ -14,7 +14,7 @@ const Loader = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setGreeting(greetings[Math.floor(Math.random() * greetings.length)]);
-    }, 2500);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -40,7 +40,7 @@ const Loader = () => {
               delay: 0.2,
               ease: easeOutExpo,
             }}
-            className="block text-2xl md:text-4xl lg:text-6xl font-medium xl:text-7xl py-1 animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent"
+            className="block sm:text-4xl md:text-4xl lg:text-6xl font-medium xl:text-7xl py-1 animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent"
           >
             {greeting}
           </motion.span>
